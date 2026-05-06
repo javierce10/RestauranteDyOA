@@ -2,7 +2,7 @@
 session_start();
 include('includes/conexion.php');
 
-// Permitir admin y caja
+// Permitir al admin y caja
 if(!isset($_SESSION['rol']) || 
    ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'caja')){
     header('Location: index.php');

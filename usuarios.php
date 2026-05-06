@@ -2,7 +2,7 @@
 session_start();
 include('includes/conexion.php');
 
-// Validar que sea admin
+// Validar que sea administrador
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     header('Location: index.php');
     exit();
