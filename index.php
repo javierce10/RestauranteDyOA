@@ -2,7 +2,7 @@
 session_start();
 include('includes/conexion.php');
 
-// Inicializar control de intentos
+// Inicializar control de intentos........
 if (!isset($_SESSION['intentos_fallidos'])) {
     $_SESSION['intentos_fallidos'] = 0;
 }
@@ -10,7 +10,7 @@ if (!isset($_SESSION['tiempo_bloqueo'])) {
     $_SESSION['tiempo_bloqueo'] = 0;
 }
 
-// Verificar bloqueo
+// Verificar bloqueo.................
 $tiempo_actual = time();
 $bloqueado = false;
 

@@ -2,7 +2,7 @@
 session_start();
 include('includes/conexion.php');
 
-// Validar rol
+// Validar rol...........
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     header('Location: index.php');
     exit();
@@ -20,7 +20,7 @@ function obtenerMesas($file) {
     return [];
 }
 
-// Función para guardar las mesas en el archivo
+// Función para guardar las mesas en el archivo..........
 function guardarMesas($file, $mesas) {
     $contenido = "<?php\n";
     $contenido .= "// Archivo de configuración de mesas\n";
