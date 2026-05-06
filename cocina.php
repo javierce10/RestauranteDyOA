@@ -7,7 +7,7 @@ if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'cocina'){
     header('Location: index.php');
     exit();
 }
-
+//Hola soy Guacamole  
 // Cambiar estado de un platillo
 if(isset($_POST['cambiar_estado'])){
     $detalle_id = $_POST['detalle_id'];
