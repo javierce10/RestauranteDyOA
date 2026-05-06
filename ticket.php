@@ -5,7 +5,7 @@ include('includes/conexion.php');
 // Permitir admin y caja
 if(!isset($_SESSION['rol']) || 
    ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'caja')){
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 if(!isset($_GET['pedido_id'])){

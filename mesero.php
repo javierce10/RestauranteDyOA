@@ -4,7 +4,7 @@ include('includes/conexion.php');
 
 // Validar rol
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'mesero'){
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 

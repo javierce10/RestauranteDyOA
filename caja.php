@@ -3,7 +3,7 @@ session_start();
 include('includes/conexion.php'); 
 
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'caja'){
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 
