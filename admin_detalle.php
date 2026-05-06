@@ -1,5 +1,5 @@
 <?php
-include('config.php'); // 🔥 AGREGA ESTO
+include('config.php'); // SE AGREGA ESTO
 
 if(!isset($_SESSION['rol']) || 
    ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'caja')){

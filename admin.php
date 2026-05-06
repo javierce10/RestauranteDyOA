@@ -2,7 +2,7 @@
 session_start();
 include('includes/conexion.php');
 
-// Validar rol
+// Validar el rol
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     header('Location: index.php');
     exit();
@@ -10,11 +10,11 @@ if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
 
 // ====== MÉTRICAS DEL DASHBOARD ======
 
-// Ventas de hoy
+// Ventas de hoy...
 $res = $conn->query("SELECT IFNULL(SUM(total),0) as total FROM ventas WHERE DATE(fecha)=CURDATE()");
 $ventas_hoy = $res->fetch_assoc()['total'];
 
-// Pedidos de hoy
+// Pedidos de hoy...
 $res = $conn->query("SELECT COUNT(*) as total FROM pedidos WHERE DATE(fecha_hora)=CURDATE()");
 $pedidos_hoy = $res->fetch_assoc()['total'];
 
