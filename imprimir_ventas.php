@@ -8,10 +8,10 @@ if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     exit();
 }
 
-// Configurar zona horaria de México
+// Configurar zona horaria de México.........
 date_default_timezone_set('America/Mexico_City');
 
-// Permitir seleccionar fecha (por defecto hoy)
+// Permitir seleccionar fecha (por defecto hoy)...........
 $fecha_seleccionada = isset($_GET['fecha']) ? $_GET['fecha'] : date('Y-m-d');
 
 // Obtener ventas del día desde la tabla ventas

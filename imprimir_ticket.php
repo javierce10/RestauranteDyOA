@@ -8,7 +8,7 @@ if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'cocina'){
     exit();
 }
 
-// Marcar producto como en preparación
+// Marcar producto como en preparación......
 if(isset($_POST['iniciar_preparacion'])){
     $detalle_id = $_POST['detalle_id'];
     $conn->query("UPDATE detalle_pedido SET estado_preparacion='en_preparacion' WHERE id=$detalle_id");
@@ -17,7 +17,7 @@ if(isset($_POST['iniciar_preparacion'])){
     exit();
 }
 
-// Marcar producto como listo
+// Marcar producto como listo........
 if(isset($_POST['marcar_listo'])){
     $detalle_id = $_POST['detalle_id'];
     $conn->query("UPDATE detalle_pedido SET estado_preparacion='listo' WHERE id=$detalle_id");
