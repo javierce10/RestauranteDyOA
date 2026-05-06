@@ -1,8 +1,8 @@
 <?php
 session_start();
 include('includes/conexion.php');
-
-// Validar rol
+//unicamente tiene derecho el admin
+// Validar rol para que solo entre el administrador
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     header('Location: index.php');
     exit();

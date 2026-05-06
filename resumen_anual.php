@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('includes/conexion.php');
-
+//aqui solo validamos que el admin pueda acceder
 // Validar rol
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     header('Location: index.php');
