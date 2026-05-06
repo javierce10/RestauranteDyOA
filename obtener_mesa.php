@@ -7,7 +7,7 @@ if(!isset($_GET['mesa'])){
 
 $mesa = $_GET['mesa'];
 
-// 🔹 Obtener pedido activo de esa mesa
+// Obtener pedido activo de esa mesa
 $stmt = $conn->prepare("
 SELECT * FROM pedidos 
 WHERE mesa=? AND estado='pendiente'
@@ -22,7 +22,7 @@ if(!$pedido){
     exit();
 }
 
-// 🔹 Obtener productos del pedido
+// Obtener productos del pedido
 $stmt = $conn->prepare("
 SELECT dp.*, pr.nombre 
 FROM detalle_pedido dp
@@ -33,7 +33,7 @@ $stmt->bind_param("i", $pedido['id']);
 $stmt->execute();
 $res = $stmt->get_result();
 
-// 🔥 MOSTRAR
+// MOSTRAR
 echo "<h3>$mesa</h3>";
 echo "<p>👤 Mesero: {$pedido['mesero_nombre']}</p>";
 echo "<hr>";

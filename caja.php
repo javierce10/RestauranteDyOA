@@ -368,7 +368,7 @@ tr:hover { background-color:#f8f9fa; }
 
 <script>
 // ════════════════════════════════
-//   MODAL DE PAGO
+//   MODALIDAD DE PAGO
 // ════════════════════════════════
 let totalActual = 0;
 
@@ -594,7 +594,7 @@ function polling() {
         .catch(() => {}); // Silencioso si falla
 }
 
-// Consulta cada 5 segundos
+// Consulta cada 5 seg
 setInterval(polling, 5000);
 </script>
 </body>

@@ -2,7 +2,7 @@
 session_start();
 include('includes/conexion.php');
 
-// Validar rol
+// Validar el rol que cumple
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     header('Location: index.php');
     exit();
@@ -54,7 +54,7 @@ if(isset($_POST['editar_producto'])){
     $stmt->close();
 }
 
-// Manejo de eliminar producto
+// Manejo de eliminar producto en lista
 if(isset($_POST['eliminar_producto'])){
     $id = $_POST['id'];
     
@@ -71,7 +71,7 @@ if(isset($_POST['eliminar_producto'])){
     $stmt->close();
 }
 
-// Manejo de cambiar disponibilidad rápida
+// Manejo de cambiar disponibilidad rápida de productos
 if(isset($_POST['toggle_disponible'])){
     $id = $_POST['id'];
     $disponible = $_POST['disponible'];
