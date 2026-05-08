@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db = "restaurante";
+$user = "u204741856_userestaurante";
+$pass = "SistemaDyOA123";
+$db = "u204741856_restaurante";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
