@@ -666,6 +666,20 @@ $count_disponibles = count(array_filter($productos, function($p){ return $p['dis
                     </button>
                 </div>
             </div>
+            <div style="margin-top:20px;">
+    <input 
+        type="text" 
+        id="buscador-productos"
+        placeholder="🔍 Buscar producto..."
+        style="
+            width:100%;
+            padding:15px;
+            border-radius:10px;
+            border:2px solid #e0e0e0;
+            font-size:16px;
+        "
+    >
+</div>
 
             <?php if(count($productos) == 0): ?>
                 <div class="no-productos">
@@ -926,6 +940,26 @@ $count_disponibles = count(array_filter($productos, function($p){ return $p['dis
                 event.target.style.display = 'none';
             }
         }
+        // Buscador en tiempo real
+document.getElementById('buscador-productos').addEventListener('keyup', function() {
+
+    const texto = this.value.toLowerCase();
+    const productos = document.querySelectorAll('.producto-card');
+
+    productos.forEach(producto => {
+
+        const nombre = producto.querySelector('.producto-nombre').textContent.toLowerCase();
+        const descripcion = producto.querySelector('.producto-descripcion').textContent.toLowerCase();
+
+        if(nombre.includes(texto) || descripcion.includes(texto)){
+            producto.style.display = '';
+        } else {
+            producto.style.display = 'none';
+        }
+
+    });
+
+});
     </script>
 </body>
 </html>  
