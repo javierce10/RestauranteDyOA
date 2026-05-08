@@ -861,7 +861,7 @@ $count_disponibles = count(array_filter($productos, function($p){ return $p['dis
             }
         }
 
-        // Toggle disponibilidad
+        // Toggle disponibilidades
         function toggleDisponible(id, estadoActual) {
             const nuevoEstado = estadoActual ? 0 : 1;
             
