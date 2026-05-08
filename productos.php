@@ -2,7 +2,7 @@
 session_start();
 include('includes/conexion.php');
 
-// Validar el rol que cumple
+// Validar rol
 if(!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin'){
     header('Location: index.php');
     exit();
@@ -54,7 +54,7 @@ if(isset($_POST['editar_producto'])){
     $stmt->close();
 }
 
-// Manejo de eliminar producto en lista
+// Manejo de eliminar producto
 if(isset($_POST['eliminar_producto'])){
     $id = $_POST['id'];
     
@@ -71,7 +71,7 @@ if(isset($_POST['eliminar_producto'])){
     $stmt->close();
 }
 
-// Manejo de cambiar disponibilidad rápida de productos
+// Manejo de cambiar disponibilidad rápida
 if(isset($_POST['toggle_disponible'])){
     $id = $_POST['id'];
     $disponible = $_POST['disponible'];
@@ -926,7 +926,6 @@ $count_disponibles = count(array_filter($productos, function($p){ return $p['dis
                 event.target.style.display = 'none';
             }
         }
-
     </script>
 </body>
 </html>  
